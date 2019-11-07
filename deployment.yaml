@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sba-front
+  name: web-front
   namespace: sba
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sba-front
+      app: web-front
   template:
     metadata:
       labels:
-        app: sba-front
+        app: web-front
     spec:
       containers:
-        - name: sba-front
-          image: registry.cn-shanghai.aliyuncs.com/yuanbing/sba-front:{version}
+        - name: web-front
+          image: registry.cn-beijing.aliyuncs.com/damondocker/web-front:{version}
           ports:
             - name: http-port
               containerPort: 8080
