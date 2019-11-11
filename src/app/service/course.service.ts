@@ -24,6 +24,10 @@ export class CourseService {
     return this.http.get(`${environment.gatewayurl}/course/api/v1/mentor/list`);
   }
 
+  findCoursesByMentor(mentorName: string,status:string) {
+    return this.http.get(`${environment.gatewayurl}/course/api/v1/mentor/listByMentor?mentorName=${mentorName}&status=${status}`);
+  }
+
   searchCourses() {
     return this.http.get(`${environment.gatewayurl}/course/api/v1/mentor/searchcourse`);
   }

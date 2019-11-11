@@ -44,6 +44,7 @@ export class AddCourseComponent implements OnInit {
       const course: NewCourse = {
         name : this.form.value.name,
         description : this.form.value.description,
+        tags : this.form.value.tags,
         skill: this.form.value.skill,
         startDate: this.form.value.startAt,
         endDate: this.form.value.endAt,
