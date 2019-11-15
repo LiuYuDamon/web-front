@@ -1,6 +1,7 @@
 export interface Course {
   id: number;
   name: string;
+  tags: string;
   mentorName: string;
   skill: string;
   startDate: Date;
